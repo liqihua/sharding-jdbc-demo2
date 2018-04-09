@@ -1,0 +1,23 @@
+dataSources:
+  db1_master: !!com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shared_db1_master?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
+    username: root
+    password: 123
+  db1_slave_1: !!com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shared_db1_slave1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
+    username: root
+    password: 123
+  db1_slave_2: !!com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/shared_db1_slave2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
+    username: root
+    password: 123
+
+masterSlaveRule:
+  name: 
+    db1
+  masterDataSourceName:
+    db1_master
+  slaveDataSourceNames: [db1_slave_1, db1_slave_2]

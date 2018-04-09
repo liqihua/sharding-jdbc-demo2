@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+
+datasource:
+  db1:
+    url: jdbc:mysql://127.0.0.1:3306/multi_db1?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
+    username: root
+    password: 123
+    driverClassName: com.mysql.cj.jdbc.Driver
+  db2:
+    url: jdbc:mysql://127.0.0.1:3306/multi_db2?useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
+    username: root
+    password: 123
+    driverClassName: com.mysql.cj.jdbc.Driver
